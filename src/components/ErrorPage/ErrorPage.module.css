@@ -1,0 +1,43 @@
+.errorPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.circle{
+    width: 200px;
+    height: 200px;
+    background-color: #88334c;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #88334c;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.link{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #88334c;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover{
+    background-color: #000000;
+    color: #ffffff;
+    transform: scale(1.1);
+}
