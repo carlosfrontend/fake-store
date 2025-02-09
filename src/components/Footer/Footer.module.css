@@ -1,6 +1,6 @@
 .footer{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height: 50px;
     background-color: #336688;
@@ -10,4 +10,29 @@
     position: absolute;
     bottom: 0;
     width: 100%;
+    flex-wrap: wrap;
+}
+
+.socialIcons{
+    display: flex;
+    gap: 10px;
+}
+
+.socialIcons a{
+    transition: all 0.3s ease-in-out;
+}
+
+.socialIcons a:hover{
+    text-decoration: none;
+    transform: scale(1.2);
+}
+
+.copyright{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .footer{
+        font-size: 0.8rem;
+    }
 }
