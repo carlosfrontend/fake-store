@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { toast } from '@pheralb/toast';
+import { useSetDataToLocalStorage } from '../../hooks/useSetDataToLocalStorage';
 
 export const ProductDetail = ({ product }) => {
   const { cartItems, setCartItems } = useOutletContext();
   const [amount, setAmount] = useState(1);
+  useSetDataToLocalStorage('cartItems', cartItems);
 
   const handleAmountChange = (e) => {
     setAmount(+e.target.value);
@@ -33,7 +35,11 @@ export const ProductDetail = ({ product }) => {
     } else {
       const newCartItems = cartItems.map((item) => {
         if (item.id === product.id) {
-          return { ...item, amount: item.amount + amount, subtotal: item.subtotal += JSON.parse(newSubtotal) };
+          return {
+            ...item,
+            amount: item.amount + amount,
+            subtotal: (item.subtotal += JSON.parse(newSubtotal))
+          };
         }
         return item;
       });
@@ -41,7 +47,10 @@ export const ProductDetail = ({ product }) => {
       setAmount(1);
     }
     toast.success({
-      text:  amount === 1 ? amount  + ' Product added to cart 👌' : amount + ' Products added to cart 👌',
+      text:
+        amount === 1
+          ? amount + ' Product added to cart 👌'
+          : amount + ' Products added to cart 👌',
       description: '✨ ' + product.title
     });
   };
