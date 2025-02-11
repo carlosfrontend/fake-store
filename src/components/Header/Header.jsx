@@ -9,7 +9,7 @@ const Links = ({cartItemsCount}) => {
         <nav className={styles.menu}>
             <Link to="/" className={styles.link}>Home</Link>
             <Link className={styles.link} to="/shop">Shop</Link>
-            <Link to="/cart" title ="cart" className={styles.cartLink}><ShoppingCart strokeWidth={3} color="#336688" /> {cartItemsCount}</Link>
+            <Link to="/cart" title ="Shopping Cart" className={styles.cartLink}><ShoppingCart strokeWidth={3} color="#336688" /> {cartItemsCount}</Link>
         </nav>
     )
 }

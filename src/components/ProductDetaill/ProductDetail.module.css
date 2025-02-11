@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+
+.productDetail{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -1px 1px 7px 0px #bdbdbd;;
+    margin: 1em;
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productDetail img{
+    width: 200px;
+    height: 120px;
+    object-fit: contain;
+    display: flex;
+    align-self: center;
+}
+
+.productDetail h3{
+    font-size: 1.2rem;
+    color: #336688;
+    font-weight: bold;
+    text-align: start;
+}
+
+.productDetail .description{
+    font-size: 1rem;
+    color: #5f4927;
+    font-weight: bold;
+    line-height: 1.8rem;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    width: 100%;
+    font-family: 'Onest', serif;
+}
+
+.productDetail .price{
+    font-size: 1.2rem;
+    color: #336688;
+    font-weight: bold;
+    background-color: #000000cc;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.addToCart{
+    background-color: #3c7210;
+    color:  #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width:100px;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.addToCart:hover{
+    background-color: #000;
+    transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+}
+.minusButton, .plusButton{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.minusButton:hover, .plusButton:hover{
+    background-color: #3c7210;
+    transform: matrix(1.2, 0, 0, 1.2, 0, 0);
+}
+
+
+input[type="number"]{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -1px 1px 7px 0px #bdbdbd;
+    font-weight: bold;
+}
+
+.quantity{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}

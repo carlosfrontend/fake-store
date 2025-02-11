@@ -1,0 +1,112 @@
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1em;
+  padding: 2em;
+  justify-items: center;
+  align-items: stretch;
+  background-color: #c9dadf;
+  border-radius: 20px;
+  margin: 2em;
+}
+
+.centered {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2em;
+  background-color: #c9dadf;
+  padding: 2em 0;
+  flex-wrap: wrap;
+  gap: 1em;
+  border-radius: 15px;
+}
+
+.shoppingImage1 {
+  width: 300px;
+  object-fit: cover;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: -1px 1px 7px 0px #bdbdbd;
+  margin: 1em;
+  transition: all 0.3s ease-in-out;
+  width: 300px;
+  height: 30%;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: -1px 1px 7px 0px #bdbdbd;
+  margin: 1em 0;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.search input {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: -1px 1px 7px 0px #bdbdbd;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+input.searchButton {
+  padding: 0.5em;
+  border-radius: 5px;
+  border: none;
+  box-shadow: -1px 1px 7px 0px #bdbdbd;
+  background-color: #fff;
+  font-weight: bold;
+  width: 120px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input.searchButton:hover {
+  background-color: #336688;
+  color: #fff;
+}
+
+.filter {
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: -1px 1px 7px 0px #bdbdbd;
+  margin: 1em 0;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  box-shadow: -1px 1px 7px 0px #bdbdbd;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .search {
+    width: 100%;
+  }
+
+  .filter {
+    width: 100%;
+  }
+}

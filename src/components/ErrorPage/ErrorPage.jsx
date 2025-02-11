@@ -6,12 +6,12 @@ export const ErrorPage = () => {
   return (
     <section className={styles.errorPage}>
       <div className={styles.circle}>
-        <ShieldAlert size={100} fill='none' color='#fff' />
+        <ShieldAlert title='alert icon' size={100} fill='none' color='#fff' />
       </div>
       <h1 className={styles.title}>Page not found 404</h1>
       <Link className={styles.link} to='/'>
         Back to home
-      </Link>
+      </Link> 
     </section>
   );
 };

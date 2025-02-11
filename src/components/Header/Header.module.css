@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
 
 .header {
   display: flex;
@@ -50,11 +51,9 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-weight: bold;
   font-size: 1.8rem;
-  font-weight: bold;
   transition: all 0.3s ease-in-out;
-  font-family: "Grape Nuts", serif;
+  font-family: "Nerko One", serif;
 }
 .cartLink {
   text-decoration: none;

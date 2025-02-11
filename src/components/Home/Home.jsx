@@ -15,7 +15,7 @@ export const Home = () => {
         </h2>
         <div className={styles.linkContainer}>
           <Link to='/shop' className={styles.link}>
-            Shop Now
+            Shop Now!
           </Link>
         </div>
       </div>

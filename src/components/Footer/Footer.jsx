@@ -1,37 +1,20 @@
 import styles from './Footer.module.css';
-import { SocialIcon } from 'react-social-icons';
+import Github from '../../Icons/Github';
+import Linkedin from '../../Icons/Linkedin';
+import X from '../../Icons/X';
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.socialIcons}>
-        <SocialIcon
-          network='linkedin'
-          style={{ height: 25, width: 25 }}
-          url='https://www.linkedin.com/in/carlosfrontend/'
-          target='_blank'
-          fgColor='#336688'
-          bgColor='#fff'
-        />
-        <SocialIcon
-          network='github'
-          style={{ height: 25, width: 25 }}
-          target='_blank'
-          url='https://github.com/carlosfrontend'
-          fgColor='#336688'
-          bgColor='#fff'
-        />
-        <SocialIcon
-          network='x'
-          style={{ height: 25, width: 25 }}
-          url='https://x.com/CarlosFrontEnd'
-          fgColor='#336688'
-          bgColor='#fff'
-          target='_blank'
-        />
+        <a title='XTwitter' href="https://x.com/CarlosFrontEnd" target='_blank' rel='noreferrer noopener'><X /></a>
+        <a title='Linkedin' target='_blank' rel='noreferrer noopener' href="https://www.linkedin.com/in/carlosfrontend/"><Linkedin /></a>
+        <a title='Github' target='_blank' rel='noreferrer noopener' href="https://github.com/carlosfrontend"><Github /></a>
       </div>
 
-      <small className={styles.copyright}>&copy; Fake Store - {new Date().getFullYear()}</small>
+      <small className={styles.copyright}>
+        &copy; Fake Store - {new Date().getFullYear()}
+      </small>
     </footer>
   );
 };
