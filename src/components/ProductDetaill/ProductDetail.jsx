@@ -10,6 +10,7 @@ export const ProductDetail = ({ product }) => {
   const [amount, setAmount] = useState(1);
   useSetDataToLocalStorage('cartItems', cartItems);
 
+
   const handleAmountChange = (e) => {
     setAmount(+e.target.value);
   };
@@ -23,7 +24,7 @@ export const ProductDetail = ({ product }) => {
     setAmount(amount - 1);
   };
 
-  const addToCart = (product) => {
+  const addToCart = ({product}) => {
     const productInCart = cartItems.find((item) => item.id === product.id);
     let newSubtotal = (product.price * amount).toFixed(2);
     if (!productInCart) {
@@ -38,7 +39,7 @@ export const ProductDetail = ({ product }) => {
           return {
             ...item,
             amount: item.amount + amount,
-            subtotal: (item.subtotal += JSON.parse(newSubtotal))
+            subtotal:Number( (item.subtotal += JSON.parse(newSubtotal)).toFixed(2))
           };
         }
         return item;
@@ -77,7 +78,7 @@ export const ProductDetail = ({ product }) => {
           +
         </button>
       </div>
-      <button onClick={() => addToCart(product)} className={styles.addToCart}>
+      <button onClick={() => addToCart({product})} className={styles.addToCart}>
         Add to cart
       </button>
     </article>

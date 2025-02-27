@@ -10,5 +10,7 @@ export const useProducts = () => {
     getProducts({ setProducts, setLoading, setError });
   }, []);
 
+
+
   return { products, loading, error };
 };

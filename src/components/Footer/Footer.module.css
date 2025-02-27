@@ -3,14 +3,15 @@
   justify-content: space-evenly;
   align-items: center;
   height: 50px;
-  background-color: #336688;
+  background-color: rgb(51, 102, 136, 0.93);
   color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
-  position: relative;
-  bottom: 0;
   width: 100%;
   flex-wrap: wrap;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .socialIcons {

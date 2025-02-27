@@ -11,7 +11,7 @@
   flex-wrap: wrap;
   position: sticky;
   top: 0;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255, 0.93);
 }
 
 .header span{

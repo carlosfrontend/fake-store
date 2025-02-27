@@ -2,9 +2,20 @@ import { ProductDetail } from '../ProductDetaill/ProductDetail';
 import styles from './Shop.module.css';
 import shoppingImage1 from '../../assets/shoppingImage1.svg';
 import { useProducts } from '../../hooks/useProducts';
+import { FilterBox } from '../FilterBox/FilterBox';
+import { useOutletContext } from 'react-router-dom';
 
 export const Shop = () => {
   const { products, loading, error } = useProducts();
+  const { filters, setFilters } = useOutletContext();
+
+  const handlePriceChange = (e) => {
+    setFilters({ ...filters, minPrice: e.target.value });
+  };
+
+  const handleCategoryChange = (e) => {
+    setFilters({ ...filters, category: e.target.value });
+  };
 
   if (loading) {
     return <p>Loading...</p>;
@@ -14,6 +25,15 @@ export const Shop = () => {
     return <p>{error}</p>;
   }
 
+  const filterProducts = (products) => {
+    return products.filter(
+      (product) =>
+        product.price >= filters.minPrice &&
+        (filters.category === 'all' || product.category === filters.category)
+    );
+  };
+  const filteredProducts = filterProducts(products);
+
   return (
     <>
       <div className={styles.centered}>
@@ -22,27 +42,18 @@ export const Shop = () => {
           src={shoppingImage1}
           alt='A woman looking for clothes with her smartphone'
         />
-        <form onSubmit={() => {}} className={styles.searchContainer}>
-          <h2>Search a product</h2>
-          <input
-            type='search'
-            id='search'
-            className={styles.search}
-            placeholder='Mens Casual Slim Fit '
-            value={''}
-            onChange={() => {}}
-          />
-          <div className={styles.filter}>
-            <input type='checkbox' id='price' name='price' value='price' />
-            <label htmlFor='price'>Order by price</label>
-          </div>
-          <input className={styles.searchButton} type='submit' value='Search' />
-        </form>
       </div>
+      <FilterBox
+        minPrice={filters.minPrice}
+        handlePriceChange={handlePriceChange}
+        handleCategoryChange={handleCategoryChange}
+      />
+      {filteredProducts.length === 0 && <p className={styles.noProducts}>No products found with the selected filters.</p>}
       <section className={styles.shop}>
-        {products.map((product) => (
-          <ProductDetail key={product.id} product={product} />
-        ))}
+        {filteredProducts.length > 0 &&
+          filteredProducts.map((product) => (
+            <ProductDetail key={product.id} product={product} />
+          ))}
       </section>
     </>
   );
