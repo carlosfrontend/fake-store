@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export const useDataFromLocalStorage = (key, setCartItems) => {
+export const useGetDataFromLocalStorage = (key, setCartItems) => {
   useEffect(() => {
     setCartItems(JSON.parse(localStorage.getItem(key)) || []);
   }, [key, setCartItems]);

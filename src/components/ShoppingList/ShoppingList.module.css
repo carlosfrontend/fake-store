@@ -1,0 +1,247 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 120px;
+  margin-bottom: 120px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px #336688;
+  background-color: #c9dadf;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px #336688;
+  border-radius: 5px;
+}
+
+.priceContainer {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  gap: 1em;
+}
+
+.price {
+  font-size: 1.2rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.priceText {
+  font-size: 1.2rem;
+  color: #336688;
+  font-weight: 500;
+  font-family: 'Varela Round', sans-serif;
+  padding-left: 1em;
+}
+
+.subtotal {
+  font-size: 1.2rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.button {
+  background-color: none;
+  color: red;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #336688;
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+.amount {
+  font-size: 1.2rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  height: 30px;
+  width: 30px;
+  margin: 0 1em;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+
+.buttonMinus,
+.buttonPlus {
+  background-color: none;
+  font-size: larger;
+  color: #336688;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonMinus:hover,
+.buttonPlus:hover {
+  background-color: #336688;
+  color: white;
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+  height: 30px;
+  width: 30px;
+}
+
+.productTitle {
+  font-size: 1rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.amountContainer {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.checkoutButton {
+  background-color: #336688;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 160px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  margin: 1em 0;
+}
+
+.checkoutButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+
+.total {
+  font-size: 1.2rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.itemsCount {
+  font-size: 1.2rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+}
+.clearButton {
+  background-color: #c73232;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 160px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  margin: 1em 0;
+}
+.clearButton,
+.checkoutButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.clearButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1em;
+  }
+  .item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+  .priceContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .price {
+    font-size: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+  }
+  .priceText {
+    font-size: 1rem;
+  }
+  .subtotal {
+    font-size: 1rem;
+  }
+  .amount {
+    font-size: 1rem;
+  }
+  .productTitle {
+    font-size: 1rem;
+  }
+}

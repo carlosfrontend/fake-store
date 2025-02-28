@@ -4,6 +4,8 @@ import shoppingImage1 from '../../assets/shoppingImage1.svg';
 import { useProducts } from '../../hooks/useProducts';
 import { FilterBox } from '../FilterBox/FilterBox';
 import { useOutletContext } from 'react-router-dom';
+import  Loader  from '../Loader/Loader';
+import { NetworkError } from '../NetworkError/NetworkError';
 
 export const Shop = () => {
   const { products, loading, error } = useProducts();
@@ -18,11 +20,11 @@ export const Shop = () => {
   };
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loader />
   }
 
   if (error) {
-    return <p>{error}</p>;
+    return <NetworkError error={error} />;
   }
 
   const filterProducts = (products) => {
@@ -48,7 +50,11 @@ export const Shop = () => {
         handlePriceChange={handlePriceChange}
         handleCategoryChange={handleCategoryChange}
       />
-      {filteredProducts.length === 0 && <p className={styles.noProducts}>No products found with the selected filters.</p>}
+      {filteredProducts.length === 0 && (
+        <p className={styles.noProducts}>
+          No products found with the selected filters.
+        </p>
+      )}
       <section className={styles.shop}>
         {filteredProducts.length > 0 &&
           filteredProducts.map((product) => (

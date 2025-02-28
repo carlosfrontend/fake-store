@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #c9dadf;
+  flex-wrap: wrap;
+  padding: 1em 2em;
+  gap: 2em;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #336688;
+  font-weight: bold;
+  font-family: 'Varela Round', sans-serif;
+  text-align: center;
+}
+
+.img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px #336688;
+  padding: 1em 2em;
+}
+
+.link {
+  text-decoration: none;
+  color: #336688;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Varela Round', sans-serif;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.link:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.buyButton {
+  text-decoration: none;
+  color: #336688;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: 'Varela Round', sans-serif;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  box-shadow: 0px 1px 1px 0px #336688;
+  background-color: #c9dadf;
+  border: 1px solid #336688;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.buyButton:hover {
+  background-color: #000;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1em;
+  }
+  .img {
+    width: 200px;
+    height: 200px;
+  }
+  .title {
+    font-size: 1.4rem;
+  }
+}

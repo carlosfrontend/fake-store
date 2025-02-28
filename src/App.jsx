@@ -2,7 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Header from './components/Header/Header';
 import { useState } from 'react';
 import { Footer } from './components/Footer/Footer';
-import { useDataFromLocalStorage } from './hooks/useDataFromLocalStorage';
+import { useGetDataFromLocalStorage } from './hooks/useGetDataFromLocalStorage';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -12,7 +12,7 @@ function App() {
     minPrice: 0
   });
 
-  useDataFromLocalStorage('cartItems', setCartItems);
+  useGetDataFromLocalStorage('cartItems', setCartItems);
 
   return (
     <>
