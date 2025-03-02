@@ -8,7 +8,7 @@ export const FilterBox = ({minPrice, handlePriceChange, handleCategoryChange}) =
         <aside className={styles.filterBox}>
            <div className={styles.priceFilter}>
             <label htmlFor="price">From price:</label>
-            <input type="range" id="price" min='0' max='800'  value={minPrice} onChange={handlePriceChange} />
+            <input type="range" id="price" min='0' max='800' data-testid='price-input'  value={minPrice} onChange={handlePriceChange} />
             <span className={styles.priceValue}>${minPrice}</span>
            </div>
 

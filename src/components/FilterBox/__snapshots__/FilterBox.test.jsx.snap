@@ -1,0 +1,71 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FilterBox Component > should render the FilterBox component 1`] = `
+<div>
+  <aside
+    class="_filterBox_f1b7d6"
+  >
+    <div
+      class="_priceFilter_f1b7d6"
+    >
+      <label
+        for="price"
+      >
+        From price:
+      </label>
+      <input
+        data-testid="price-input"
+        id="price"
+        max="800"
+        min="0"
+        type="range"
+        value="0"
+      />
+      <span
+        class="_priceValue_f1b7d6"
+      >
+        $
+        0
+      </span>
+    </div>
+    <div
+      class="_categoryFilter_f1b7d6"
+    >
+      <label
+        for="category"
+      >
+        Category:
+      </label>
+      <select
+        id="category"
+      >
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="men's clothing"
+        >
+          Men's Clothing
+        </option>
+        <option
+          value="women's clothing"
+        >
+          Women's Clothing
+        </option>
+        <option
+          value="jewelery"
+        >
+          Jewelery
+        </option>
+        <option
+          value="electronics"
+        >
+          Electronics
+        </option>
+      </select>
+    </div>
+  </aside>
+</div>
+`;

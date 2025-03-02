@@ -112,6 +112,7 @@ const ShoppingList = ({ cartItems, setCartItems }) => {
                   </div>
                 </div>
                 <button
+                  data-testid={`remove-item-${item.id}`}
                   className={styles.button}
                   onClick={() => removeItem(item.id)}
                 >

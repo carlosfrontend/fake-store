@@ -1,5 +1,5 @@
 import { useOutletContext } from 'react-router-dom';
-import HeroCartCard from '../HeroCartCard/HeroCardCard';
+import HeroCartCard from '../HeroCartCard/HeroCartCard';
 import ShoppingList from '../ShoppingList/ShoppingList';
 import { useEffect } from 'react';
 
@@ -17,9 +17,9 @@ export const Cart = () => {
   return (
     <>
       <HeroCartCard productsQuantity={productsQuantity} />
-      {productsQuantity > 0 && (
+      {productsQuantity > 0 ?  (
         <ShoppingList cartItems={cartItems} setCartItems={setCartItems} />
-      )}
+      ): null}
     </>
   );
 };

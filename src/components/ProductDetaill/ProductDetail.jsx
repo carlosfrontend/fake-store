@@ -19,15 +19,15 @@ export const ProductDetail = ({ product }) => {
   };
 
   const handleDecrement = () => {
-    if (amount <= 0) return;
+    if (amount <= 1) return;
     setAmount(amount - 1);
   };
 
   const addToCart = ({ product }) => {
     if (amount === 0) {
       toast.error({
-        text: 'Amount can not be 0 !',
-        description: 'Try setting amount to 1 as minimum',
+        text: 'Amount can not be 0 😞 !',
+        description: 'Try setting amount to 1 as minimum'
       });
       return;
     }
@@ -65,24 +65,24 @@ export const ProductDetail = ({ product }) => {
   };
 
   return (
-    <article className={styles.productDetail}>
+    <article className={styles.productDetail} data-testid='product-detail'>
       <h3>{product.title}</h3>
       <img src={product.image} alt={product.title} />
       <p className={styles.description}>{product.description}</p>
       <p className={styles.price}>$ {product.price}</p>
       <div className={styles.quantity}>
-        <button onClick={handleDecrement} className={styles.minusButton}>
+        <button onClick={handleDecrement} data-testid={`minus-${product.id}`} className={styles.minusButton}>
           -
         </button>
         <input
-          min={0}
+          min={1}
           type='number'
           onChange={handleAmountChange}
           value={amount}
           id={product.id}
           name='amount'
         />
-        <button onClick={handleIncrement} className={styles.plusButton}>
+        <button onClick={handleIncrement} data-testid={`plus-${product.id}`} className={styles.plusButton}>
           +
         </button>
       </div>
