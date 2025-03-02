@@ -84,32 +84,24 @@ describe('Shop Component', () => {
 
   it('handle category change', async () => {
     render(<Shop />);
-
-    // Verifica que el combobox tenga el valor correcto antes de disparar el evento
     const categorySelect = screen.getByRole('combobox', { name: /category/i });
     expect(categorySelect.value).toBe('all');
 
-    // Dispara el evento de cambio
     await act(async () => {
       fireEvent.change(categorySelect, { target: { value: 'jewelery' } });
     });
 
-    // Espera a que el mock de setFilters se haya llamado con los valores correctos
-    waitFor(() => {
+    await waitFor(() => {
       expect(mockSetFilters).toHaveBeenCalledWith({
         minPrice: 0,
         category: 'jewelery'
       });
     });
-
-    // Verifica que el valor del combobox se haya actualizado correctamente
     expect(categorySelect.value).toBe('jewelery');
-    vi.clearAllMocks();
   });
 
   it('handle price change', () => {
     render(<Shop />);
-
     const slider = screen.getByTestId('price-input');
     expect(slider).toBeInTheDocument();
     expect(slider).toHaveValue('0');
@@ -117,6 +109,28 @@ describe('Shop Component', () => {
     act(() => {
       fireEvent.change(slider, { target: { value: 100 } });
     });
+  });
+
+  it('should filter products correctly based on category', () => {
+    useOutletContext.mockReturnValue({
+      filters: { minPrice: 0, category: 'electronics' },
+      setFilters: mockSetFilters
+    });
+
+    render(<Shop />);
+    expect(screen.getByText(/Test Product 1/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Test Product 2/i)).not.toBeInTheDocument();
+  });
+
+  it('should filter products correctly when category is "all"', () => {
+    useOutletContext.mockReturnValue({
+      filters: { minPrice: 0, category: 'all' },
+      setFilters: mockSetFilters
+    });
+
+    render(<Shop />);
+    expect(screen.getByText(/Test Product 1/i)).toBeInTheDocument();
+    expect(screen.getByText(/Test Product 2/i)).toBeInTheDocument();
   });
 
   it('should render the text "No products found with the selected filters."', async () => {
@@ -152,7 +166,7 @@ describe('Shop Component', () => {
       .toBeInTheDocument;
   });
 
-  it('should render an Network Error', () => {
+  it('should render a Network Error', () => {
     useProducts.mockReturnValue({
       products: [],
       loading: false,
