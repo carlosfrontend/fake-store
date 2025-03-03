@@ -2,7 +2,6 @@ import { describe, it, vi, beforeEach, expect } from 'vitest';
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
-// Global mock for toast.
 vi.mock('@pheralb/toast', () => ({
   toast: {
     success: vi.fn(),
@@ -10,12 +9,10 @@ vi.mock('@pheralb/toast', () => ({
   }
 }));
 
-// Mock the local storage hook to do nothing.
 vi.mock('../../hooks/useSetDataToLocalStorage', () => ({
   useSetDataToLocalStorage: () => {}
 }));
 
-// Our test product.
 const product = {
   id: 1,
   title: 'Test Product',
@@ -25,8 +22,7 @@ const product = {
   image: 'test.jpg'
 };
 
-describe('ProductDetail Component - Full Coverage', () => {
-  // Reset modules, cleanup DOM, and clear mocks before each test.
+describe('ProductDetail Component', () => {
   beforeEach(() => {
     vi.resetModules();
     cleanup();
@@ -45,7 +41,7 @@ describe('ProductDetail Component - Full Coverage', () => {
           setCartItems: setCartItemsMock
         })
       }));
-      // Dynamically import the component so it picks up the above mock.
+
       const mod = await import('./ProductDetail');
       ProductDetail = mod.ProductDetail;
       render(<ProductDetail product={product} />);
@@ -103,7 +99,9 @@ describe('ProductDetail Component - Full Coverage', () => {
 
     it('shows error toast if amount is 0 when adding to cart', async () => {
       const user = userEvent.setup();
-      const addToCartButton = screen.getByRole('button', { name: /add to cart/i });
+      const addToCartButton = screen.getByRole('button', {
+        name: /add to cart/i
+      });
       const amountInput = screen.getByRole('spinbutton');
       await user.clear(amountInput);
       await user.type(amountInput, '0');
@@ -118,7 +116,9 @@ describe('ProductDetail Component - Full Coverage', () => {
 
     it('adds a new product to the cart with correct data', async () => {
       const user = userEvent.setup();
-      const addToCartButton = screen.getByRole('button', { name: /add to cart/i });
+      const addToCartButton = screen.getByRole('button', {
+        name: /add to cart/i
+      });
       // With default amount (1), clicking Add to Cart should append the product.
       await user.click(addToCartButton);
       expect(setCartItemsMock).toHaveBeenCalledTimes(1);
@@ -138,7 +138,9 @@ describe('ProductDetail Component - Full Coverage', () => {
 
     it('adds multiple quantities of the product to the cart', async () => {
       const user = userEvent.setup();
-      const addToCartButton = screen.getByRole('button', { name: /add to cart/i });
+      const addToCartButton = screen.getByRole('button', {
+        name: /add to cart/i
+      });
       const amountInput = screen.getByRole('spinbutton');
       // Set amount to 2.
       await user.clear(amountInput);
@@ -178,10 +180,7 @@ describe('ProductDetail Component - Full Coverage', () => {
       };
       vi.doMock('react-router-dom', () => ({
         useOutletContext: () => ({
-          cartItems: [
-            { ...product, amount: 1, subtotal: 50.0 },
-            otherProduct
-          ],
+          cartItems: [{ ...product, amount: 1, subtotal: 50.0 }, otherProduct],
           setCartItems: setCartItemsMock
         })
       }));
@@ -192,7 +191,9 @@ describe('ProductDetail Component - Full Coverage', () => {
 
     it('updates the existing product in the cart with correct data', async () => {
       const user = userEvent.setup();
-      const addToCartButton = screen.getByRole('button', { name: /add to cart/i });
+      const addToCartButton = screen.getByRole('button', {
+        name: /add to cart/i
+      });
       await user.click(addToCartButton);
       // For the product with id === product.id, amount increases from 1 to 2 and subtotal from 50 to 100.
       // The other product should remain unchanged.
@@ -215,7 +216,7 @@ describe('ProductDetail Component - Full Coverage', () => {
         }
       ]);
       const { toast } = await import('@pheralb/toast');
-      // Note: In this branch, the toast uses the current state's amount (which remains 1) for its message.
+      
       expect(toast.success).toHaveBeenCalledWith({
         text: '1 Product added to cart 👌',
         description: '✨ ' + product.title
