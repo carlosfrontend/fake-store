@@ -39,4 +39,4 @@
 
    ## Happy coding 🚀!
 
-   You can see the live preview [https://fake-store-1xz.pages.dev/]()
+   You can see the live preview [here](https://fake-store-1xz.pages.dev/)
