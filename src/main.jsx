@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import routes from './components/routes';
+import routes from '../src/routes/routes';
 import { Toaster } from '@pheralb/toast';
 
 const router = createBrowserRouter(routes);

@@ -1,8 +1,8 @@
 import App from "../App";
-import {Home} from "./Home/Home";
-import {Cart} from "./Cart/Cart";
-import {Shop} from "./Shop/Shop";
-import {ErrorPage} from "./ErrorPage/ErrorPage";
+import {Home} from "../../src/components/Home/Home";
+import {Cart} from "../../src/components/Cart/Cart";
+import {Shop} from "../../src/components/Shop/Shop";
+import {ErrorPage} from "../../src/components/ErrorPage/ErrorPage";
 const routes = [
   {
     path: '/',
