@@ -3,7 +3,7 @@ import styles from './ShoppingList.module.css';
 import PropTypes from 'prop-types';
 import { toast } from '@pheralb/toast';
 
-const ShoppingList = ({ cartItems, setCartItems }) => {
+const ShoppingList = ({ cartItems, setCartItems, productsQuantity }) => {
   const handleAmountChange = (e) => {
     const id = +e.target.id;
     let newAmount = +e.target.value;
@@ -124,7 +124,7 @@ const ShoppingList = ({ cartItems, setCartItems }) => {
         ))}
       </ul>
       <p className={styles.itemsCount}>
-        There are {cartItems.length} items in your cart !
+        There are {productsQuantity} products in your cart !
       </p>
       <h3 className={styles.total}>
         Total: $
@@ -148,5 +148,6 @@ export default ShoppingList;
 
 ShoppingList.propTypes = {
   cartItems: PropTypes.array,
-  setCartItems: PropTypes.func
+  setCartItems: PropTypes.func,
+  productsQuantity: PropTypes.number
 };

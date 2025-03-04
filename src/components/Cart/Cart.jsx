@@ -18,7 +18,7 @@ export const Cart = () => {
     <>
       <HeroCartCard productsQuantity={productsQuantity} />
       {productsQuantity > 0 ?  (
-        <ShoppingList cartItems={cartItems} setCartItems={setCartItems} />
+        <ShoppingList cartItems={cartItems} setCartItems={setCartItems} productsQuantity={productsQuantity} />
       ): null}
     </>
   );
