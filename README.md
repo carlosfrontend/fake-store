@@ -1,42 +1,185 @@
+# ✨🛍️💻 Fake Store React App
 
-# Shopping Cart React Project - (The Odin Project)
+📦 Este repositorio contiene una aplicación web desarrollada con React que simula una tienda en línea: puedes ver productos, analizarlos, agregarlos al carrito, simular una compra y más, todo utilizando la [Fake Store API](https://fakestoreapi.com/). El proyecto fue construido con Vite, React Router, Context API, hooks, y pruebas utilizando Vitest y React Testing Library. 🧪⚙️🔗
 
-### Assignment
+## 📄📌🧭 Menú
 
-1. Create a new React project.
-1. Think about the component and the folder structure. How could you set up your application? Which components or functionalities do you need? It's a good idea to note this down somewhere you can easily get to and refer back and add to it to keep track.
-1. You should have at least two pages (a home page and a shop page, which includes your shopping cart). Let the user navigate between the pages with a navigation bar, which will be shown on both pages.
-1. To your homepage, you can add whatever you'd like! A few images or information will be totally fine; it doesn't have to be something fancy - it's to test the concepts taught thus far.
-1. On the shopping cart page, you should have the same navigation bar that displays the number of items currently in the cart. You should also have a button next to it where you can go to the cart to checkout and pay (however we are not going to implement this logic here).
-1. Build individual card elements for each of your products. Display an input field on it, which lets a user manually type in how many items they want to buy. Also, add an increment and decrement button next to it for fine-tuning. You can also display a title for each product as well as an "Add To Cart" button.
-1. Fetch your shop items from [FakeStore API](https://fakestoreapi.com) or something similar.
-1. Once a user has submitted their order, the amount on the cart itself should adjust accordingly.
-1. Clear out any `missing in props validation` errors in your app!
-1. Make sure to test your app thoroughly using the React Testing Library. Be careful not to test `react-router-dom` directly, since it is an external library and the developers working on it must have tested the library already.
-1. As usual, style your application so you can show it off! You have a host of options provided already.
-1. Lastly, it's time to deploy it! Depending on what hosting solution you're using, you may need some additional configuration so that your routing is handled correctly as a single page application (SPA).
+- 📺 Demo
+- ⚙️ Funcionalidades
+- 🧰 Tecnologías
+- 🖥️ Cómo ejecutarlo localmente
 
-   1. **Netlify**: You need to add a `_redirects` file to the `public/` directory of your project. Copy the following to redirect all routes to the index page and let `react-router-dom` handle the rest. You can read more about this at the [Netlify documentation on redirects](https://docs.netlify.com/routing/redirects/).
+  - 🔍 Requisitos
+  - 📦 Instalación de dependencias
+  - 🚀 Ejecutar entorno de desarrollo
+  - 🛠️ Generar build de producción
 
-      ```text
-      /* /index.html 200
-      ```
+- 🧪 Pruebas
+- 🗂️ Estructura de carpetas
+- 📜 Scripts disponibles
+- 🌍 Despliegue
+- 🤝 Contribuciones
+- 📄 Licencia
+- 📬 Contacto
 
-   1. **Vercel**: You need to add a `vercel.json` file at the root of your project and copy the following configuration. Similar to Netlify, this redirects all routes to the index page and lets `react-router-dom` handle the rest. More information can be found here at the [Vercel documentation for SPAs and Vite](https://vercel.com/docs/frameworks/vite#using-vite-to-make-spas).
+## 🧪🔗🖥️ Demo
 
-      ```json
-      {
-        "rewrites": [
-          {
-            "source": "/(.*)",
-            "destination": "/index.html"
-          }
-        ]
-      }
-      ```
+Mira la demo aquí:
+[https://fake-store-1xz.pages.dev](https://fake-store-1xz.pages.dev)
+📱⚡🛒
 
-   1. **Cloudflare Pages**: As of the time of writing, unlike Netlify and Vercel, no additional steps are required as the default behaviour will allow `react-router-dom` to correctly handle redirects for SPAs. You can learn more about this at the [Cloudflare documentation on serving pages](https://developers.cloudflare.com/pages/platform/serving-pages/).
+## 🚀🛠️📦 Funcionalidades
 
-   ## Happy coding 🚀!
+- 🔄 Carga asincrónica del catálogo de productos.
+- 📝 Vista de detalles con descripción, precio y valoraciones.
+- 🛒 Carrito con funciones para agregar, quitar y modificar cantidades.
+- 📊 Resumen con totales y productos seleccionados.
+- 📱 Diseño responsive con enfoque mobile-first.
+- 🧭 Navegación mediante React Router.
+- 🌐 Manejo de estado global usando Context API.
+- 🔁 Hooks personalizados para lógica reutilizable.
+- 🧹 Código limpio con ESLint y Prettier.
+- 🧪 Pruebas unitarias e integradas con Vitest y React Testing Library.
 
-   You can see the live preview [here](https://fake-store-1xz.pages.dev/)
+## 🧰🔧💡 Stack Tecnológico
+
+- ⚛️ React 18
+- ⚡ Vite
+- 🧭 React Router DOM
+- 🌐 Context API
+- 🧪 Vitest + React Testing Library
+- 🧹 ESLint
+- 🎨 CSS Modules
+
+## 🖥️🧪🔄 Ejecución Local
+
+### 🔍⚙️📋 Requisitos
+
+- 🟢 Node.js >= 16
+- 📦 npm >= 8 / Yarn >= 1.22
+
+### 📥📂🔧 Instalación
+
+```bash
+git clone https://github.com/carlosfrontend/fake-store.git
+cd fake-store
+npm install # o yarn install
+```
+
+### 🚀🧪🌐 Ejecutar entorno de desarrollo
+
+```bash
+npm run dev # o yarn dev
+```
+
+Accede en: `http://localhost:5173`
+🧑‍💻💻🌍
+
+### 🏗️📦📤 Generar build de producción
+
+```bash
+npm run build # o yarn build
+```
+
+Archivos generados en la carpeta `dist/`
+🔒⚙️📁
+
+## 🧪📊🔍 Pruebas
+
+```bash
+npm run test # o yarn test
+```
+
+Modo watch:
+
+```bash
+npm run test:watch # o yarn test:watch
+```
+
+📈🔁📋
+
+## 🗂️📁🧱 Estructura del Proyecto
+
+```
+fake-store/
+├── public/
+│   └── index.html
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── contexts/
+│   ├── hooks/
+│   ├── pages/
+│   ├── services/
+│   ├── tests/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── styles/
+├── .gitignore
+├── eslint.config.js
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## ⚙️📜📌 Scripts
+
+- ▶️ `npm run dev` — Iniciar entorno de desarrollo
+- 🏗️ `npm run build` — Generar build de producción
+- 👁️ `npm run preview` — Previsualizar la build
+- 🧹 `npm run lint` — Ejecutar linter
+- 🧪 `npm run test` — Ejecutar pruebas
+- 🔁 `npm run test:watch` — Ejecutar pruebas en modo observación
+
+## 🚀🌍📤 Despliegue
+
+### 🌐🗺️🧭 Netlify
+
+1. 📝 Crear el archivo `public/_redirects` con el contenido:
+
+   ```
+   /* /index.html 200
+   ```
+
+2. ⚙️ Configurar:
+
+   - 🛠️ Comando de build: `npm run build`
+   - 📂 Carpeta de salida: `dist/`
+
+### ☁️📡🧭 Vercel
+
+1. 📝 Crear el archivo `vercel.json`:
+
+   ```json
+   {
+     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+   }
+   ```
+
+2. ⬆️ Subir el repositorio a Vercel
+   🚀📁🔗
+
+## 🙌👥🔧 Contribuciones
+
+1. 🍴 Haz un fork del repositorio
+2. 🌿 Crea una rama: `git checkout -b feature/NuevaFeature`
+3. 🛠️ Realiza tus cambios y haz commit: `git commit -m "feat: NuevaFeature"`
+4. 📤 Envía tus cambios: `git push origin feature/NuevaFeature`
+5. 🔁 Abre un Pull Request
+   🎯🧪🔄
+
+## 📄⚖️📘 Licencia
+
+MIT — Ver [LICENSE](./LICENSE)
+📑🔓📝
+
+## 📬👤🌐 Contacto
+
+📝 Portafolio de Carlos Frontend: [https://carlospulido.netlify.app](https://carlosfrontend.com)
+
+GitHub: [https://github.com/carlosfrontend](https://github.com/carlosfrontend)
+✉️💬📡
+
+---
+
+🚀 Gracias por visitar este proyecto. ¡No dudes en dejar tu ⭐ si te resulta útil o inspirador! Tu apoyo ayuda a mantener y mejorar este tipo de desarrollos. 🙌💡✨
