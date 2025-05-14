@@ -2,7 +2,11 @@
 
 📦 Este repositorio contiene una aplicación web desarrollada con React que simula una tienda en línea: puedes ver productos, analizarlos, agregarlos al carrito, simular una compra y más, todo utilizando la [Fake Store API](https://fakestoreapi.com/). El proyecto fue construido con Vite, React Router, Context API, hooks, y pruebas utilizando Vitest y React Testing Library. 🧪⚙️🔗
 
-## 🖼️ Captura de pantalla
+## 🖼️ Capturas de pantalla
+
+![Captura desde 2025-05-14 13-52-33](https://github.com/user-attachments/assets/4328219f-e3e4-475d-9749-7966e522b142)
+
+![Captura desde 2025-05-14 13-52-22](https://github.com/user-attachments/assets/5a94931d-c0b0-46e4-a9ab-1063bb04645d)
 
 ---
 
