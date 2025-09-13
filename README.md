@@ -33,7 +33,7 @@
 ## 🧪🔗🖥️ Demo
 
 Mira la demo aquí:
-[https://fake-store-1xz.pages.dev](https://fake-store-1xz.pages.dev)
+[Fake Store](https://fakestr.netlify.app/)
 📱⚡🛒
 
 ## 🚀🛠️📦 Funcionalidades
@@ -183,7 +183,7 @@ MIT — Ver [LICENSE](./LICENSE)
 
 ## 📬👤🌐 Contacto
 
-📝 Portafolio de Carlos Frontend: [https://carlospulido.netlify.app](https://carlospulido.netlify.app)
+📝 Portafolio de Carlos Frontend: [https://carlospulido.netlify.app](https://carlospulido-portafolio.vercel.app/)
 
 GitHub: [https://github.com/carlosfrontend](https://github.com/carlosfrontend)
 ✉️💬📡
