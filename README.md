@@ -25,7 +25,6 @@
 - 🧪 Pruebas
 - 🗂️ Estructura de carpetas
 - 📜 Scripts disponibles
-- 🌍 Despliegue
 - 🤝 Contribuciones
 - 📄 Licencia
 - 📬 Contacto
@@ -138,34 +137,6 @@ fake-store/
 - 🧹 `npm run lint` — Ejecutar linter
 - 🧪 `npm run test` — Ejecutar pruebas
 - 🔁 `npm run test:watch` — Ejecutar pruebas en modo observación
-
-## 🚀🌍📤 Despliegue
-
-### 🌐🗺️🧭 Netlify
-
-1. 📝 Crear el archivo `public/_redirects` con el contenido:
-
-   ```
-   /* /index.html 200
-   ```
-
-2. ⚙️ Configurar:
-
-   - 🛠️ Comando de build: `npm run build`
-   - 📂 Carpeta de salida: `dist/`
-
-### ☁️📡🧭 Vercel
-
-1. 📝 Crear el archivo `vercel.json`:
-
-   ```json
-   {
-     "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-   }
-   ```
-
-2. ⬆️ Subir el repositorio a Vercel
-   🚀📁🔗
 
 ## 🙌👥🔧 Contribuciones
 
