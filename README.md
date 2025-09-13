@@ -183,9 +183,9 @@ MIT — Ver [LICENSE](./LICENSE)
 
 ## 📬👤🌐 Contacto
 
-📝 Portafolio de Carlos Frontend: [https://carlospulido.netlify.app](https://carlospulido-portafolio.vercel.app/)
+📝  [Portafolio de Carlos Frontend](https://carlospulido-portafolio.vercel.app/)
 
-GitHub: [https://github.com/carlosfrontend](https://github.com/carlosfrontend)
+[GitHub de carlosfrontend](https://github.com/carlosfrontend)
 ✉️💬📡
 
 ---
